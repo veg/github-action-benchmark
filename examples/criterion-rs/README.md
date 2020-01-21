@@ -1,11 +1,11 @@
-# Rust Criterion example for benchmarking with `cargo bench`
+# Rust Criterion.rs example for benchmarking with `cargo bench`
 
 -   [Workflow for this example](../../.github/workflows/rust.yml)
--   [Action log of this example](https://github.com/rhysd/github-action-benchmark/actions?query=workflow%3A%22Rust+Example%22)
+-   [Action log of this example](TODO)
 -   [Benchmark results on GitHub pages](https://rhysd.github.io/github-action-benchmark/dev/bench/)
 
 This directory shows how to use [`github-action-benchmark`](https://github.com/rhysd/github-action-benchmark)
-with [`criterion`](https://github.com/bheisler/criterion.rs).
+with [Criterion.rs](https://github.com/bheisler/criterion.rs).
 
 ## Run benchmarks
 
@@ -37,7 +37,7 @@ Store the benchmark results with step using the action. Please set `cargo` to `t
 - name: Store benchmark result
   uses: rhysd/github-action-benchmark@v1
   with:
-      tool: 'cargo'
+      tool: 'criterion-rs'
       output-file-path: output.txt
 ```
 

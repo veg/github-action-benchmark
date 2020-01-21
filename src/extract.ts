@@ -202,7 +202,7 @@ function extractCargoResult(output: string): BenchmarkResult[] {
     return ret;
 }
 
-function extractCriterionResult(output: string): BenchmarkResult[] {
+function extractCriterionRsResult(output: string): BenchmarkResult[] {
     const lines = output.split('\n');
     const ret = [];
     // Example:
@@ -457,8 +457,8 @@ export async function extractResult(config: Config): Promise<Benchmark> {
         case 'cargo':
             benches = extractCargoResult(output);
             break;
-        case 'criterion':
-            benches = extractCriterionResult(output);
+        case 'criterion-rs':
+            benches = extractCriterionRsResult(output);
             break;
         case 'go':
             benches = extractGoResult(output);

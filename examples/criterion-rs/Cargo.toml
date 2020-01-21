@@ -3,11 +3,12 @@ name = "criterion_example"
 version = "0.1.0"
 authors = ["rhysd <https://rhysd.github.io>"]
 edition = "2018"
+publish = false
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-criterion = "0.3.0"
+criterion = "*"
 
 [[bench]]
 name = "bench"

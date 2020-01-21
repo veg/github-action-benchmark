@@ -55,7 +55,7 @@ describe('extractResult()', function() {
             ],
         },
         {
-            tool: 'criterion',
+            tool: 'criterion-rs',
             expected: [
                 {
                     name: 'Symbol Creation',
