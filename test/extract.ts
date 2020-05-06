@@ -223,7 +223,8 @@ describe('extractResult()', function() {
     ];
 
     for (const test of normalCases) {
-        it('extracts benchmark output from ' + test.tool, async function() {
+      if(test.tool == "benchmarkjs") {
+        it.only('extracts benchmark output from ' + test.tool, async function() {
             const file = test.file ?? `${test.tool}_output.txt`;
             const outputFilePath = path.join(__dirname, 'data', 'extract', file);
             const config = {
@@ -237,6 +238,7 @@ describe('extractResult()', function() {
             A.equal(bench.tool, test.tool);
             A.deepEqual(test.expected, bench.benches);
         });
+      }
     }
 
     it('raises an error on unexpected tool', async function() {
