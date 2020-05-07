@@ -247,7 +247,6 @@ describe('extractResult()', function() {
             ],
         },
     ];
-    
     for (const test of normalCases) {
         it('extracts benchmark output from ' + test.tool, async function() {
             const file = test.file ?? `${test.tool}_output.txt`;
