@@ -289,8 +289,8 @@ function extractBenchmarkJsResult(output: string): BenchmarkResult[] {
             continue;
         }
 
-        const value = 1/parseFloat(m[1].replace(reComma, ''));
-        const unit = 'secs/op';
+        const value = parseFloat(m[1].replace(reComma, ''));
+        const unit = m[2];
         const range = m[3];
         const extra = `${m[4]} samples`;
 
