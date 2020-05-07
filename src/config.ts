@@ -24,7 +24,7 @@ export interface Config {
     maxItemsInChart: number | null;
 }
 
-export const VALID_TOOLS: ToolType[] = ['cargo', 'go', 'benchmarkjs', 'pytest', 'googlecpp', 'catch2'];
+export const VALID_TOOLS: ToolType[] = ['cargo', 'go', 'benchmarkjs', 'benchmarkjsInverse', 'pytest', 'googlecpp', 'catch2'];
 const RE_UINT = /^\d+$/;
 
 function validateToolType(tool: string): asserts tool is ToolType {
