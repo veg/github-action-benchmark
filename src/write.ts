@@ -56,7 +56,7 @@ async function addIndexHtmlIfNeeded(dir: string) {
     console.log('Created default index.html at', indexHtml);
 }
 
-function biggerIsBetter(tool: ToolType): boolean {
+function biggerIsBetter(tool: ToolType) {
     switch (tool) {
         case 'cargo':
             return false;
@@ -64,6 +64,8 @@ function biggerIsBetter(tool: ToolType): boolean {
             return false;
         case 'benchmarkjs':
             return true;
+        case 'benchmarkjsInverse':
+            return false;
         case 'pytest':
             return true;
         case 'googlecpp':
@@ -71,6 +73,7 @@ function biggerIsBetter(tool: ToolType): boolean {
         case 'catch2':
             return false;
     }
+    return false;
 }
 
 interface Alert {

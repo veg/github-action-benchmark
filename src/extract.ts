@@ -464,8 +464,8 @@ export async function extractResult(config: Config): Promise<Benchmark> {
         case 'benchmarkjs':
             benches = extractBenchmarkJsResult(output);
             break;
-        case 'benchmarkjs':
-            benches = extractBenchmarkJsResult(output);
+        case 'benchmarkjsInverse':
+            benches = extractBenchmarkJsResultInverse(output);
             break;
         case 'pytest':
             benches = extractPytestResult(output);
