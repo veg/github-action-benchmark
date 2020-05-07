@@ -1,0 +1,87 @@
+yarn run v1.22.1
+$ npm-run-all build mocha
+$ tsc -p .
+$ mocha ./test
+
+
+  extractResult()
+    1) extracts benchmark output from benchmarkjs
+
+
+  0 passing (27ms)
+  1 failing
+
+  1) extractResult()
+       extracts benchmark output from benchmarkjs:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+[32m+ actual[39m [31m- expected[39m
+
+  [
+    {
+      extra: '93 samples',
+      name: 'fib(10)',
+      range: '±0.74%',
+[32m+[39m     unit: 'ops/sec',
+[32m+[39m     value: 1431759
+[31m-[39m     unit: 'secs/op',
+[31m-[39m     value: 6.984415673308147e-7
+    },
+    {
+      extra: '96 samples',
+      name: 'fib(20)',
+      range: '±0.32%',
+[32m+[39m     unit: 'ops/sec',
+[32m+[39m     value: 12146
+[31m-[39m     unit: 'secs/op',
+[31m-[39m     value: 0.00008233163181294254
+    },
+    {
+[32m+[39m     extra: '69 samples FROM A',
+[31m-[39m     extra: '69 samples',
+      name: 'createObjectBuffer with 200 comments',
+      range: '±1.70%',
+[32m+[39m     unit: 'ops/sec',
+[32m+[39m     value: 81.61
+[31m-[39m     unit: 'secs/op',
+[31m-[39m     value: 0.012253400318588408
+    }
+  ]
+      + expected - actual
+
+         {
+           "extra": "93 samples"
+           "name": "fib(10)"
+           "range": "±0.74%"
+      -    "unit": "ops/sec"
+      -    "value": 1431759
+      +    "unit": "secs/op"
+      +    "value": 6.984415673308147e-7
+         }
+         {
+           "extra": "96 samples"
+           "name": "fib(20)"
+           "range": "±0.32%"
+      -    "unit": "ops/sec"
+      -    "value": 12146
+      +    "unit": "secs/op"
+      +    "value": 0.00008233163181294254
+         }
+         {
+      -    "extra": "69 samples FROM A"
+      +    "extra": "69 samples"
+           "name": "createObjectBuffer with 200 comments"
+           "range": "±1.70%"
+      -    "unit": "ops/sec"
+      -    "value": 81.61
+      +    "unit": "secs/op"
+      +    "value": 0.012253400318588408
+         }
+       ]
+      
+      at Context.<anonymous> (test/extract.js:261:33)
+
+
+
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
