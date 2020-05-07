@@ -136,14 +136,14 @@ describe('extractResult()', function() {
                 {
                     name: 'fib(10)',
                     range: '±0.74%',
-                    unit: "secs/op",
+                    unit: 'secs/op',
                     value: 6.984415673308147e-7,
                     extra: '93 samples',
                 },
                 {
                     name: 'fib(20)',
                     range: '±0.32%',
-                    unit: "secs/op",
+                    unit: 'secs/op',
                     value: 0.00008233163181294254,
                     extra: '96 samples',
                 },
