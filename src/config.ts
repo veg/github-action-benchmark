@@ -3,14 +3,7 @@ import { promises as fs } from 'fs';
 import * as os from 'os';
 import * as path from 'path';
 
-export type ToolType = 
-    'cargo'|
-    'go'|
-    'benchmarkjs'|
-    'benchmarkjsInverse'|
-    'pytest'|
-    'googlecpp'|
-    'catch2';
+export type ToolType = 'cargo' | 'go' | 'benchmarkjs' | 'pytest' | 'googlecpp' | 'catch2';
 export interface Config {
     name: string;
     tool: ToolType;
