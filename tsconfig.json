@@ -1,24 +1,24 @@
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "lib": [
-      "esnext"
-    ],
-    "preserveConstEnums": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noEmitOnError": false,
-    "noFallthroughCasesInSwitch": false,
-    "strict": false,
-    "target": "es2019",
-    "sourceMap": false,
-    "esModuleInterop": false,
-    "resolveJsonModule": false
-  },
+// {
+//   "compilerOptions": {
+//     "module": "commonjs",
+//     "moduleResolution": "node",
+//     "lib": [
+//       "esnext"
+//     ],
+//     "preserveConstEnums": false,
+//     "noImplicitAny": false,
+//     "noImplicitReturns": false,
+//     "noImplicitThis": false,
+//     "noUnusedLocals": false,
+//     "noUnusedParameters": false,
+//     "noEmitOnError": false,
+//     "noFallthroughCasesInSwitch": false,
+//     "strict": false,
+//     "target": "es2019",
+//     "sourceMap": false,
+//     "esModuleInterop": false,
+//     "resolveJsonModule": false
+//   },
   // "files": [
   //   "src/index.ts",
   //   "src/config.ts",
@@ -33,4 +33,4 @@
   //   "test/default_index_html.ts",
   //   "scripts/ci_validate_modification.ts"
   // ]
-}
+//}
