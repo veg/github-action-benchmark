@@ -255,7 +255,7 @@ function extractBenchmarkJsResultInverse(output: string): BenchmarkResult[] {
             continue;
         }
 
-        const value =  ( 1 / parseFloat(m[1].replace(reComma, '') ) ).toFixed(3) ;
+        const value = 1/parseFloat(m[1].replace(reComma, ''));
         const unit = 'secs/op';
         const range = m[3];
         const extra = `${m[4]} samples`;
