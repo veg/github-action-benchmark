@@ -101,33 +101,6 @@ function extractGoResult(output) {
     }
     return ret;
 }
-function extractBenchmarkJsResultInverse(output) {
-    const lines = output.split(/\r?\n/g);
-    const ret = [];
-    // Example:
-    //   fib(20) x 11,465 ops/sec ±1.12% (91 runs sampled)
-    //   createObjectBuffer with 200 comments x 81.61 ops/sec ±1.70% (69 runs sampled)
-    const reExtract = /^ x ([0-9,.]+)\s+(\S+)\s+((?:±|\+-)[^%]+%) \((\d+) runs sampled\)$/; // Note: Extract parts after benchmark name
-    const reComma = /,/g;
-    for (const line of lines) {
-        const idx = line.lastIndexOf(' x ');
-        if (idx === -1) {
-            continue;
-        }
-        const name = line.slice(0, idx);
-        const rest = line.slice(idx);
-        const m = rest.match(reExtract);
-        if (m === null) {
-            continue;
-        }
-        const value = 1 / parseFloat(m[1].replace(reComma, ''));
-        const unit = 'secs/op';
-        const range = m[3];
-        const extra = `${m[4]} samples`;
-        ret.push({ name, value, range, unit, extra });
-    }
-    return ret;
-}
 function extractBenchmarkJsResult(output) {
     const lines = output.split(/\r?\n/g);
     const ret = [];
@@ -289,9 +262,6 @@ async function extractResult(config) {
             break;
         case 'benchmarkjs':
             benches = extractBenchmarkJsResult(output);
-            break;
-        case 'benchmarkjsInverse':
-            benches = extractBenchmarkJsResultInverse(output);
             break;
         case 'pytest':
             benches = extractPytestResult(output);
